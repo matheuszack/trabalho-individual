@@ -10,7 +10,7 @@
 <body>
     <main>
     <div class="container">
-        <h1>decod</h1>
+        <h1>Decod</h1>
         <h3>decodificador de textos com: base64 e cifra de césar</h3>
         <form action="">
             <textarea name="mensagem" id="mensagem" placeholder="Digite sua mensagem..."></textarea>
@@ -20,25 +20,36 @@
                 <option value="base64">Base64</option>
                 <option value="cifra">Cifra de césar</option>
             </select>
-            <div id="chave-escolha">
-                <div class="opção">
-                <input name="escolha" type="radio" value="codificar" id="codified">
-               <label id="descrição"> Codificar</label>
-               </div>
-               <div class="opção">
-                <input name="escolha" type="radio" value="decodificar"
-                id="decodified"> 
-                <label id="descrição">decodificar</label></div>
-           
-             </div>
-             <textarea id="resultado" class="resultado da mensagem" placeholder="Mensagem Criptografada"></textarea>
-            <div class="botao">
-             <button>Codificar Mensagem</button>
+            <div class="chave-escolha">
+                <label class="chave" for="range">Escolha a Chave</label>
+                <div class="slider-range">
+                    <input type="range" value="1" min="1" max="26" class="range" id="range"
+                        oninput="rangenumber.value=value" />
+                    <input type="number" value="1" id="rangenumber" min="1" max="26" oninput="range.value=value" />
+                </div>
+            </div>
+
+            <div class="radio-button">
+                <div class="Tipo">
+                    <input type="radio" name="codificar" id="codificar" value="codificar" checked />
+                    <label for="codificar">.codificar</label>
+                </div>
+
+                <div class="Tipo">
+                    <input type="radio" name="codificar" id="decodificar" value="decodificar" />
+                    <label for="decodificar">.decodificar</label>
+                </div>
+            </div>
+
+            <textarea id="resultado" class="mensagem resultado" 
+                placeholder="Mensagem Criptografada"></textarea>
+            <div class="btn">
+                <button>Codificar Mensagem!</button>
             </div>
             
         </form>
      </div>
     </main>
-    
+    <script src="java.JS"></script>
 </body>
 </html>
