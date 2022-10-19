@@ -38,6 +38,7 @@ h1 {
     -webkit-backdrop-filter: blur( 13.5px );
     border-radius: 10px;
     border: 1px solid rgba( 255, 255, 255, 0.18 );
+    margin-bottom: 20px;
     
 }
 h3 {
@@ -97,6 +98,7 @@ textarea {
   color: #92ebeb;
   place-items: center;
   gap: 5px;
+  margin-bottom: 10px;
   }
   #selecionar {
     font-size: 2rem;
