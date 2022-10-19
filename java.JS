@@ -1,20 +1,19 @@
-const selecione = document.querySelector(".select");
-const incremento = document.querySelector(".chave-escolha");
-const btn = document.querySelector("button");
-const radiobtn = document.querySelector(".radio-button");
-const codificar = document.querySelector("#codificar");
-const decodificar = document.querySelector("#decodificar");
+const selecione = window.document.querySelector(".select");
+const escolha = window.document.querySelector(".chave-escolha");
+const radiobtn = window.document.querySelector(".radio-button");
+const btn = window.document.querySelector("button");
+const codificar = window.document.querySelector("#codificar");
+const decodificar = window.document.querySelector("#decodificar");
+//utilizando o const, pois ele não pode ser redefinido, assim mantendo seu valor de atribuição fixo.
 
 
 
 selecione.addEventListener("click", function () {
     if (selecione.value == "cifra") {
-      incremento.style.display = "block";
-    } else {
-      incremento.style.display = "none";
-    }
+      escolha.style.display = "block";
+    } 
   });
-
+//evento simples para a modificação da chave de escolha.
   function base64() {
     let mensagem = document.querySelector("#mensagem").value;
   
@@ -25,7 +24,7 @@ selecione.addEventListener("click", function () {
       let decodificado = atob(mensagem);
       return decodificado;
     }
-  }
+  }//configuração inicial da base64 quando adicionado a mensagem.
 
   function cifraCesar() {
     let msg = document.querySelector("#mensagem").value;
@@ -57,9 +56,9 @@ selecione.addEventListener("click", function () {
   }
   radiobtn.addEventListener("click", function () {
     if (codificar.checked) {
-      btn.innerHTML = "Codificar Mensagem!";
+      btn.innerHTML = "<strong>Codificar Mensagem!</strong>";
     } else if (decodificar.checked) {
-      btn.innerHTML = "Decodificar Mensagem!";
+      btn.innerHTML = "<strong>Decodificar Mensagem!</strong>";
     }
   });
   
@@ -71,4 +70,3 @@ selecione.addEventListener("click", function () {
       resultado.innerText = cifraCesar();
     }
   });
-  
